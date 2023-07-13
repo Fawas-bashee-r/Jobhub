@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jobhub/constants/app_constants.dart';
 
 import '../../common/app_bar.dart';
 import '../../common/drawer/drawe_widget.dart';
@@ -24,6 +25,27 @@ class _ProfilePageState extends State<ProfilePage> {
               child: DrawerWidget(),
             ),
           )),
+      body: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          Container(
+            width: width,
+            height: hieght * 0.12,
+            color: Color(kLight.value),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
+                  child: CachedNetworkImage(),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
