@@ -35,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
           borderRadius: 30,
           showShadow: true,
           angle: 0.0,
-          slideWidth: 250,
+          slideWidth: 210,
           menuBackgroundColor: Color(kLightBlue.value),
         );
       },
